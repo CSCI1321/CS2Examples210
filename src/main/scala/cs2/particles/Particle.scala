@@ -15,5 +15,7 @@ class Particle(var pos:Vec2, var vel:Vec2) {
     def timeStep():Unit = {
         pos += vel
     }
-
+    def applyForce(force:Vec2):Unit = {
+        vel += force
+    }
 }

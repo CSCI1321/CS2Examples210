@@ -8,5 +8,5 @@ abstract class Stack[A] {
 }
 
 object Stack {
-    def apply[A : Manifest]() = new ArrayStack[A]()
+    def apply[A : Manifest]() = new LinkedStack[A]()
 }

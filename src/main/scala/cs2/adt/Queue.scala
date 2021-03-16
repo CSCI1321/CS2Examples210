@@ -8,5 +8,5 @@ abstract class Queue[A] {
 }
 
 object Queue {
-    def apply[A : Manifest]() = new ArrayQueue[A]()
+    def apply[A : Manifest]() = new LinkedQueue[A]()
 }

@@ -14,7 +14,6 @@ class LinkedPriorityQueue[A <% Ordered[A]] extends PriorityQueue[A] {
       }
       rover.next = new Node(elem, rover.next)
     }
-
   }
   def get():A = {
     var ret = head.data

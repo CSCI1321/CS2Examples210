@@ -7,7 +7,7 @@ class SeqTester {
     var s:Seq[Int] = null
 
     @Before def init():Unit = {
-        s = new LinkedSeq[Int]()
+        s = Seq[Int]()
     }
 
     @Test def checkInsertAndGet():Unit = {

@@ -19,7 +19,7 @@ abstract class Seq[A] extends Iterable[A] {
 }
 
 object Seq {
-    def apply[A]():Seq[A] = new LinkedSeq[A]()
+    def apply[A : Manifest]():Seq[A] = new DoubleLinkedSeq[A]()
 
     def main(args:Array[String]):Unit = {
         var seq = Seq[Int]()

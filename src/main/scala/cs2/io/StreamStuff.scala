@@ -18,5 +18,17 @@ object StreamStuff {
     infile.close()
     outfile.close()
 
+    val pw = new PrintWriter("pi.txt")
+    pw.println(math.Pi)
+    pw.close
+
+    val dos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream("pi.dat")))
+    dos.writeDouble(math.Pi)
+    dos.writeInt(Int.MaxValue)
+    dos.writeShort(255)
+    dos.writeBoolean(true)
+    dos.close
+
+
   }
 }

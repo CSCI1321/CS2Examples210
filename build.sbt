@@ -25,4 +25,4 @@ libraryDependencies ++= javaFXModules.map( m=>
 )
 
 
-//mainClass in (Compile, packageBin) := Some("cs2.net.ChatProgram")
+mainClass in (Compile, packageBin) := Some("cs2.net.ChatProgram")

@@ -32,6 +32,7 @@ object SimpleNetworking {
   def clientSide():Unit = {
     val sock = new Socket("localhost", 50000)
     val is = sock.getInputStream
+    while(is.available == 0) Thread.sleep(10)
     while(is.available() > 0) {
       println("<< Received: " + is.read.toChar)
     }
@@ -40,7 +41,11 @@ object SimpleNetworking {
   }
 
   def main(args:Array[String]):Unit = {
-    println(getPageSource("https://www.google.com"))
+    (new Thread { override def run():Unit = { serverSide() }}).start
+    Thread.sleep(10)
+    clientSide()
+
+    //println(getPageSource("https://www.google.com"))
   }
 
 }
